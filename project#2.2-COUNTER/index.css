@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    overflow:hidden;
+    flex-direction: column;
+    background-color: aqua;
+}
+
+.container ul li {
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    background-color: aquamarine;
+    cursor: pointer;
+    border-radius: 30% 70% 70% 30% / 74% 70% 30% 26% ;
+}
+
+.container ul li:hover {
+    background-color: blanchedalmond;
+
+}
