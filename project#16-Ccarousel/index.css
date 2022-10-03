@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.image-fluid {
+   height: 100vh;
+   width: 100vw;
+}
+.image-fluid .container {
+    position: relative;
+}
+.image-fluid .container img {
+    height: auto;
+    width: 100%;
+}
+.image-fluid .container .left {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    color: aliceblue;
+    font-size: 3rem;
+}
+.image-fluid .container .right {
+    position: absolute;
+    top: 45%;
+    right: 5%;
+    color: aliceblue;
+    font-size: 3rem;
+}
+.image-fluid .container .left:hover, .image-fluid .container .right:hover {
+    opacity: 0.5;
+    transform: rotate(360deg);
+}
+.image-fluid .container .text {
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    width: 50%;
+    color: aliceblue;
+    font-size: 1rem;
+}
+.image-fluid .container .arrow {
+    position: absolute;
+    top: 87%;
+    left: 47%;
+    color: aliceblue;
+}
+.image-fluid .container .arrow:nth-child(1) {
+    margin-right: 2rem;
+}
