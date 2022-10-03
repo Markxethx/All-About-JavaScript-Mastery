@@ -1,0 +1,83 @@
+.two {
+  height: 100vh;
+  width: 100%;
+}
+.two .direction-one {
+  position: absolute;
+  top: 30%;
+}
+.two .direction-two {
+  position: absolute;
+  top: 20%;
+}
+.two .direction-three {
+  position: absolute;
+  top: 60%;
+}
+.two .direction-three button {
+  background-color: transparent;
+}
+.two .direction-three button a {
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+}
+.two .random-cards {
+  position: absolute;
+  width: 80%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.two .random-cards .box-card {
+  width: 6.5%;
+  height: 80%;
+  margin: 0 5px;
+  box-shadow: var(--box-shadow);
+  -webkit-animation: box 0.15s 6 linear;
+          animation: box 0.15s 6 linear;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.two .random-cards .box-card:hover {
+  transform: scale(1.02);
+}
+.two .random-cards .box-card button {
+  height: 100%;
+  width: 100%;
+  border: 1px solid transparent;
+  background-color: transparent;
+  font-size: 50px;
+}
+@-webkit-keyframes box {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(50%);
+  }
+  50% {
+    transform: translateX(75%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes box {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(50%);
+  }
+  50% {
+    transform: translateX(75%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}/*# sourceMappingURL=_random-cards.css.map */

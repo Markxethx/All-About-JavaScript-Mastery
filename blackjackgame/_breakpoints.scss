@@ -1,0 +1,146 @@
+@media only screen and (min-width: $extra-large){
+    body{
+        .container{
+            width: 80%;
+            height: 90%;
+            .container-box{
+                .container-inner-box{
+                    .card-one, .card-two{
+                        margin-right: 50px;
+                        transform: translateX(25px);
+                        border: 1px solid #000;
+                        height: 85%;
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+    }
+
+@media only screen and (max-width: $large){
+body{
+    .container{
+        width: 70%;
+        height: 90%;
+        .container-box{
+            .btn{
+                position: absolute;
+                top: 77%;
+                text-shadow: 5px 6px 6px rgba(0,0,0,0.61);
+                height: 25px;
+                width: auto;
+                padding: 2px 3px;
+            }
+            .start-game{
+                left: 10%;
+                height: 10%;
+                width: 20%;
+                box-shadow: var(--box-shadow);
+                button{
+                    border: 1px solid transparent;
+                }
+            }
+            .new-game{
+                right: 10%;
+                height: 10%;
+                width: 20%;
+                box-shadow: var(--box-shadow);
+                button{
+                    border: 1px solid transparent;
+                }
+            }
+            .player{
+                left: 45%;
+            }
+            .container-inner-box{
+                .card-one, .card-two{
+                    margin-right: 50px;
+                    transform: translateX(25px);
+                    height: 75%;
+                    width: 25%;
+                }
+            }
+        }
+    }
+}
+}
+@media only screen and (max-width: $tablet){
+    body{
+        .container{
+            width: 70%;
+            height: 90%;
+            .container-box{
+                .btn{
+                    top: 77%;
+                    height: 20px;
+                    padding: 1px 2px;
+                    font-size: 12px;
+                }
+                .container-inner-box{
+                    .card-one, .card-two{
+                        margin-right: 50px;
+                        transform: translateX(25px);
+                        height: 75%;
+                        width: 25%;
+                    }
+                }
+            }
+        }
+    }
+    }
+@media only screen and (max-width: $large-mobile){
+    body{
+        .container{
+            width: 90%;
+            height: 80%;
+            .container-box{
+                position: relative;
+                .btn{
+                    position: absolute;
+                    top: 75%;
+                    height: 20px;
+                    font-size: 12px;
+                }
+                .start-game{
+                    left: 15%;
+                }
+                .new-game{
+                    right: 5%;
+                }
+                .player{
+                    left: 45%;
+                    top: 70%;
+                }
+                .container-inner-box{
+                    .card-one, .card-two{
+                        margin-right: 40px;
+                        transform: translateX(25px);
+                        height: 75% !important;
+                        width: 30% !important;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: $medium-mobile){
+    body{
+        .container{
+            width: 90%;
+            height: 80%;
+            .container-box{
+                .container-inner-box{
+                    .card-one, .card-two{
+                        margin-right: 30px;
+                        transform: translateX(12px);
+                        height: 70%;
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+}
+    

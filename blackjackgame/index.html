@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Jack Game</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="_random-cards.css">
+    <script src="https://kit.fontawesome.com/34b9716bbe.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <body>
+        <div id="container" class="container">
+            <div class="up-container container-box">
+                <div class="container-inner-box">
+                    <div class="card left-second" id="left-second1"></div>
+                    <div class="card left-third" id="left-third1"></div>
+                    <div class="card-one cardOne1" id="card-one"></div>
+                    <div class="card-two cardOne2"></div>
+                    <div class="card right-second" id="right-second1"></div>
+                    <div class="card right-third" id="right-third1"></div>
+                    <div class="leftPower1">
+                        <div class="leftPowerIcon1 eks"><i class="fa-solid fa-circle-xmark"></i></div>
+                        <div class="leftPowerEmoji1"></div>
+                        <div class="leftPowerComment1"></div>
+                    </div>
+                    <div class="leftWeakness1">
+                        <div class="leftWeaknessIcon1 eks"><i class="fa-solid fa-circle-xmark"></i></div>
+                        <div class="leftWeaknessEmoji1"></div>
+                        <div class="leftWeaknessComment1"></div>
+                    </div>
+                    <div class="rightPower1">
+                        <div class="rightPowerIcon1 eks"><i class="fa-solid fa-circle-xmark"></i></div>
+                        <div class="rightPowerEmoji1"></div>
+                        <div class="rightWeaknessComment1"></div>
+                    </div>
+                    <div class="rightWeakness1">
+                        <div class="rightWeaknessIcon1 eks"><i class="fa-solid fa-circle-xmark"></i></div>
+                        <div class="rightWeaknessEmoji1"></div>
+                        <div class="rightWeaknessComment1"></div>
+                    </div>
+                </div>
+                <p class="btn start-game revealOne"><button>Reveal Cards</button></p><p class="btn player player1">Player 1</p><p class="btn new-game plusCard1"><button>+ Card</button></p>
+            </div>
+            <div onclick="startTheGame()" class="start-the-game startTheGame">Start</div>
+            <div class="left">Arjayar</div>
+            <h1>VS</h1>
+            <div class="right">The Blank</div>
+            <div onclick="restartTheGame()" class="restart-the-game restartTheGame">Restart</div>
+            <div class="bot-container container-box">
+                <div class="container-inner-box">
+                    <div class="card left-second left-second" id="left-second2"></div>
+                    <div class="card left-third left-third" id="left-third2"></div>
+                    <div class="card-one cardTwo1" id="firstCardOne"></div>
+                    <div class="card-two cardTwo2" id="firstCardTwo"></div>
+                    <div class="card right-second right-second" id="right-second2"></div>
+                    <div class="card right-third right-third" id="right-third2"></div>
+                    <div class="leftPower2">
+                        <div class="leftPowerIcon2 eks"><i class="fa-solid fa-circle-xmark"></i></div>
+                        <div class="leftPowerEmoji2"></div>
+                        <div class="leftPowerComment2"></div>
+                    </div>
+                    <div class="leftWeakness2">
+                        <div class="leftWeaknessIcon2 eks"><i class="fa-solid fa-circle-xmark"></i></div>
+                        <div class="leftWeaknessEmoji2"></div>
+                        <div class="leftWeaknessComment2"></div>
+                    </div>
+                    <div class="rightPower2">
+                        <div class="rightPowerIcon2 eks"><i class="fa-solid fa-circle-xmark"></i></div>
+                        <div class="rightPowerEmoji2"></div>
+                        <div class="rightWeaknessComment2"></div>
+                    </div>
+                    <div class="rightWeakness2">
+                        <div class="rightWeaknessIcon2 eks"><i class="fa-solid fa-circle-xmark"></i></div>
+                        <div class="rightWeaknessEmoji2"></div>
+                        <div class="rightWeaknessComment2"></div>
+                    </div>
+                </div>
+                <p class="btn start-game revealTwo"><button>Reveal Cards</button></p><p class="btn player player2">Player 2</p><p class="btn new-game plusCard2"><button>+ Card</button></p>
+            </div>
+        </div>
+
+
+        <!--Random Cards Player One-->
+
+        <section class="containerTwo">
+            <div class="direction-one"><p>Choose Your Own Set of Card.</p></div>
+            <div class="direction-two"><h1>Player One</h1></div>
+            <div class="direction-three"><button onclick="backHomeOne()">Done Choosing my Cards</button></div>
+            <div class="random-cards">
+            <div class="box-card box111 box1"> <button id="box-card-1"></button></div>
+            <div class="box-card box111 box2"> <button id="box-card-2" ></button></div>
+            <div class="box-card box111 box3"> <button id="box-card-3" ></button></div>
+            <div class="box-card box111 box4"> <button id="box-card-4" ></button></div>
+            <div class="box-card box111 box5"> <button id="box-card-5" ></button></div>
+            <div class="box-card box111 box6"> <button id="box-card-6" ></button></div>
+            <div class="box-card box111 box7"> <button id="box-card-7" ></button></div>
+            <div class="box-card box111 box8"> <button id="box-card-8" ></button></div>
+            <div class="box-card box111 box9"> <button id="box-card-9" ></button></div>
+            <div class="box-card box111 box10"> <button id="box-card-10"></button></div>
+            <div class="box-card box111 box11"> <button id="box-card-11"></button></div>
+            <div class="box-card box111 box12"> <button id="box-card-12"></button></div>
+            <div class="box-card box111 box13"> <button id="box-card-13"></button></div>
+            </div>
+            </section>
+
+
+            <!--Random Cards Player Two-->
+
+        <section class="containerThree">
+            <div class="direction-one"><p>Choose Your Own Set of Card.</p></div>
+            <div class="direction-two"><h1>Player Two</h1></div>
+            <div class="direction-three"><button onclick="backHomeTwo()">Done Choosing my Cards</button></div>
+            <div class="random-cards">
+            <div class="box-card box222 box21"> <button id="box-card-21"></button></div>
+            <div class="box-card box222 box22"> <button id="box-card-22" ></button></div>
+            <div class="box-card box222 box23"> <button id="box-card-23" ></button></div>
+            <div class="box-card box222 box24"> <button id="box-card-24" ></button></div>
+            <div class="box-card box222 box25"> <button id="box-card-25" ></button></div>
+            <div class="box-card box222 box26"> <button id="box-card-26" ></button></div>
+            <div class="box-card box222 box27"> <button id="box-card-27" ></button></div>
+            <div class="box-card box222 box28"> <button id="box-card-28" ></button></div>
+            <div class="box-card box222 box29"> <button id="box-card-29" ></button></div>
+            <div class="box-card box222 box210"> <button id="box-card-210"></button></div>
+            <div class="box-card box222 box211"> <button id="box-card-211"></button></div>
+            <div class="box-card box222 box212"> <button id="box-card-212"></button></div>
+            <div class="box-card box222 box213"> <button id="box-card-213"></button></div>
+            </div>
+            </section>
+        <script src="index.js"></script>
+</body>
+</html>

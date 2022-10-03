@@ -1,0 +1,683 @@
+:root {
+  --box-shadow: 2px 2px 1px #45566754,
+  -8px -8px 15px #5165790a,
+   inset -4px -4px 15px #eb5e28,
+   inset 4px 4px 10px #ffa62b;
+  --box-shadow-player: 2px 2px 1px #45566754,
+  -8px -8px 15px #5165790a,
+   inset -4px -4px 15px #3b3d50,
+   inset 4px 4px 10px #384a37;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poker In October Demo";
+  color: #ffe8d6;
+}
+
+@font-face {
+  font-family: "Poker In October Demo";
+  src: url("card.otf");
+}
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: clip;
+  letter-spacing: 1.5px;
+  background-image: url("stranger.jpg");
+  background-position: center;
+  size: cover;
+  z-index: 1;
+}
+body .container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 90%;
+}
+body .container .right, body .container .container-box {
+  margin-top: -10px;
+}
+body .container .container-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: var(--box-shadow);
+  flex-direction: column;
+  position: relative;
+  background-color: transparent;
+  border-radius: 10px;
+}
+body .container .container-box * {
+  border-radius: 5px;
+}
+body .container .container-box .start-game button:hover, body .container .container-box .new-game button:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease;
+}
+body .container .container-box .btn {
+  position: absolute;
+  top: 77%;
+  text-shadow: 5px 6px 6px rgba(0, 0, 0, 0.61);
+  height: 25px;
+  width: auto;
+  padding: 2px 3px;
+  cursor: pointer;
+}
+body .container .container-box .start-game {
+  left: 10%;
+  height: 10%;
+  width: 20%;
+  box-shadow: var(--box-shadow);
+}
+body .container .container-box .start-game button {
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: transparent;
+}
+body .container .container-box .new-game {
+  right: 10%;
+  height: 10%;
+  width: 20%;
+  box-shadow: var(--box-shadow);
+}
+body .container .container-box .new-game button {
+  border: 1px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+body .container .container-box .player {
+  left: 45%;
+}
+body .container .container-box .container-inner-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  height: 80%;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+}
+body .container .container-box .container-inner-box .card-one, body .container .container-box .container-inner-box .card-two {
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  height: 65%;
+  width: 22%;
+  font-size: 100px;
+  position: absolute;
+  cursor: pointer;
+  top: 12%;
+}
+body .container .container-box .container-inner-box .card-one {
+  left: 25%;
+}
+body .container .container-box .container-inner-box .card-two {
+  right: 25%;
+}
+body .container .container-box .container-inner-box .card {
+  position: absolute;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+body .container .container-box .container-inner-box .left-second {
+  width: 15%;
+  height: 20%;
+  left: 5%;
+  top: 17%;
+  font-size: 15px;
+  padding-top: 15px;
+}
+body .container .container-box .container-inner-box .left-third {
+  top: 48%;
+  width: 15%;
+  height: 20%;
+  left: 5%;
+  font-size: 15px;
+  padding-top: 15px;
+}
+body .container .container-box .container-inner-box .right-second {
+  width: 15%;
+  height: 20%;
+  right: 5%;
+  top: 17%;
+  font-size: 15px;
+  padding-top: 15px;
+}
+body .container .container-box .container-inner-box .right-third {
+  top: 48%;
+  width: 15%;
+  height: 20%;
+  right: 5%;
+  font-size: 15px;
+  padding-top: 15px;
+}
+body .container .container-box .container-inner-box .leftPower1, body .container .container-box .container-inner-box .leftWeakness1, body .container .container-box .container-inner-box .rightPower1, body .container .container-box .container-inner-box .rightWeakness1 {
+  position: absolute;
+  width: 43%;
+  height: 70%;
+  top: 8%;
+  font-size: 15px;
+  padding-top: 15px;
+  background-color: rgba(204, 81, 15, 0.034);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: none;
+}
+body .container .container-box .container-inner-box .leftPower2, body .container .container-box .container-inner-box .leftWeakness2, body .container .container-box .container-inner-box .rightPower2, body .container .container-box .container-inner-box .rightWeakness2 {
+  position: absolute;
+  width: 43%;
+  height: 70%;
+  top: 8%;
+  font-size: 15px;
+  padding-top: 15px;
+  background-color: rgba(204, 81, 15, 0.034);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: none;
+}
+body .container .container-box .container-inner-box .leftPower1 {
+  left: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .container-box .container-inner-box .leftPower1 .leftPowerIcon1 {
+  position: absolute;
+  font-size: 15px;
+  top: 1%;
+  left: 93%;
+  color: #000;
+  z-index: 3;
+}
+body .container .container-box .container-inner-box .leftPower1 .leftPowerEmoji1 {
+  text-align: center;
+  width: 30%;
+  height: 90%;
+  z-index: 3;
+}
+body .container .container-box .container-inner-box .leftPower1 .leftPowerComment1 {
+  text-align: center;
+  width: 65%;
+  height: 90%;
+  z-index: 3;
+}
+body .container .container-box .container-inner-box .leftPower2 {
+  left: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .container-box .container-inner-box .leftPower2 .leftPowerIcon2 {
+  position: absolute;
+  font-size: 15px;
+  top: 1%;
+  left: 93%;
+  color: #000;
+  z-index: 3;
+}
+body .container .container-box .container-inner-box .leftPower2 .leftPowerEmoji2 {
+  text-align: center;
+  width: 30%;
+  height: 90%;
+}
+body .container .container-box .container-inner-box .leftPower2 .leftPowerComment2 {
+  text-align: center;
+  width: 65%;
+  height: 90%;
+}
+body .container .container-box .container-inner-box .leftWeakness1 {
+  left: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .container-box .container-inner-box .leftWeakness1 .leftWeaknessIcon1 {
+  position: absolute;
+  font-size: 15px;
+  top: 1%;
+  left: 93%;
+  color: #000;
+  z-index: 3;
+}
+body .container .container-box .container-inner-box .leftWeakness1 .leftWeaknessEmoji1 {
+  text-align: center;
+  width: 30%;
+  height: 90%;
+}
+body .container .container-box .container-inner-box .leftWeakness1 .lefWeaknessComment1 {
+  text-align: center;
+  width: 65%;
+  height: 90%;
+}
+body .container .container-box .container-inner-box .leftWeakness2 {
+  left: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .container-box .container-inner-box .leftWeakness2 .leftWeaknessIcon2 {
+  position: absolute;
+  font-size: 15px;
+  top: 1%;
+  left: 93%;
+  color: #000;
+  z-index: 3;
+}
+body .container .container-box .container-inner-box .leftWeakness2 .leftWeaknessEmoji2 {
+  text-align: center;
+  width: 30%;
+  height: 90%;
+}
+body .container .container-box .container-inner-box .leftWeakness2 .lefWeaknessComment2 {
+  text-align: center;
+  width: 65%;
+  height: 90%;
+}
+body .container .container-box .container-inner-box .rightPower1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  right: 5%;
+}
+body .container .container-box .container-inner-box .rightPower1 .rightPowerIcon1 {
+  position: absolute;
+  font-size: 15px;
+  top: 1%;
+  left: 93%;
+  color: #000;
+  z-index: 3;
+}
+body .container .container-box .container-inner-box .rightPower1 .rightPowerEmoji1 {
+  text-align: center;
+  width: 30%;
+  height: 90%;
+}
+body .container .container-box .container-inner-box .rightPower1 .rightPowerComment1 {
+  text-align: center;
+  width: 65%;
+  height: 90%;
+}
+body .container .container-box .container-inner-box .rightPower2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  right: 5%;
+}
+body .container .container-box .container-inner-box .rightPower2 .rightPowerIcon2 {
+  position: absolute;
+  font-size: 15px;
+  top: 1%;
+  left: 93%;
+  color: #000;
+  z-index: 3;
+}
+body .container .container-box .container-inner-box .rightPower2 .rightPowerEmoji2 {
+  text-align: center;
+  width: 30%;
+  height: 90%;
+}
+body .container .container-box .container-inner-box .rightPower2 .rightPowerComment2 {
+  text-align: center;
+  width: 65%;
+  height: 90%;
+}
+body .container .container-box .container-inner-box .rightWeakness1 {
+  right: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .container-box .container-inner-box .rightWeakness1 .rightWeaknessIcon1 {
+  position: absolute;
+  font-size: 15px;
+  top: 1%;
+  left: 93%;
+  color: #000;
+  z-index: 3;
+}
+body .container .container-box .container-inner-box .rightWeakness1 .rightWeaknessEmoji1 {
+  text-align: center;
+  width: 30%;
+  height: 90%;
+}
+body .container .container-box .container-inner-box .rightWeakness1 .rightWeaknessComment1 {
+  text-align: center;
+  width: 65%;
+  height: 90%;
+}
+body .container .container-box .container-inner-box .rightWeakness2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  right: 5%;
+}
+body .container .container-box .container-inner-box .rightWeakness2 .rightWeaknessIcon2 {
+  position: absolute;
+  font-size: 15px;
+  top: 1%;
+  left: 93%;
+  color: #000;
+  z-index: 3;
+}
+body .container .container-box .container-inner-box .rightWeakness2 .rightWeaknessEmoji2 {
+  text-align: center;
+  width: 30%;
+  height: 90%;
+}
+body .container .container-box .container-inner-box .rightWeakness2 .rightWeaknessComment2 {
+  text-align: center;
+  width: 65%;
+  height: 90%;
+}
+body .container .left, body .container .right {
+  width: 50%;
+  box-shadow: var(--box-shadow);
+  margin: 10px 0;
+  margin-left: 25%;
+  height: 10%;
+}
+body .container .right {
+  margin-bottom: 20px;
+}
+body .container .start-the-game, body .container .restart-the-game {
+  width: 8%;
+  box-shadow: var(--box-shadow);
+  margin: 10px 0;
+  height: 15%;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  padding-top: 45px;
+  cursor: pointer;
+}
+body .container .start-the-game:hover, body .container .restart-the-game:hover {
+  transform: scale(1.1);
+}
+body .container .start-the-game {
+  left: 28%;
+  z-index: 3;
+  cursor: pointer;
+}
+body .container .restart-the-game {
+  right: 28%;
+  z-index: 3;
+}
+body .containerTwo {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+body .containerTwo .direction-one {
+  position: absolute;
+  top: 30%;
+}
+body .containerTwo .direction-two {
+  position: absolute;
+  top: 20%;
+}
+body .containerTwo .direction-three {
+  position: absolute;
+  top: 60%;
+}
+body .containerTwo .direction-three button {
+  background-color: transparent;
+}
+body .containerTwo .random-cards {
+  position: absolute;
+  width: 80%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+body .containerTwo .random-cards .box-card {
+  width: 6.5%;
+  height: 80%;
+  margin: 0 5px;
+  box-shadow: var(--box-shadow);
+  -webkit-animation: box 0.15s 6 linear;
+          animation: box 0.15s 6 linear;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+body .containerTwo .random-cards .box-card:hover {
+  transform: scale(1.02);
+}
+body .containerTwo .random-cards .box-card button {
+  height: 100%;
+  width: 100%;
+  border: 1px solid transparent;
+  background-color: transparent;
+  font-size: 50px;
+}
+@-webkit-keyframes box {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(50%);
+  }
+  50% {
+    transform: translateX(75%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes box {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(50%);
+  }
+  50% {
+    transform: translateX(75%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.containerThree {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.containerThree .direction-one {
+  position: absolute;
+  top: 30%;
+}
+.containerThree .direction-two {
+  position: absolute;
+  top: 20%;
+}
+.containerThree .direction-three {
+  position: absolute;
+  top: 60%;
+}
+.containerThree .direction-three button {
+  background-color: transparent;
+}
+.containerThree .random-cards {
+  position: absolute;
+  width: 80%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.containerThree .random-cards .box-card {
+  width: 6.5%;
+  height: 80%;
+  margin: 0 5px;
+  box-shadow: var(--box-shadow);
+  -webkit-animation: box 0.15s 6 linear;
+          animation: box 0.15s 6 linear;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.containerThree .random-cards .box-card:hover {
+  transform: scale(1.02);
+}
+.containerThree .random-cards .box-card button {
+  height: 100%;
+  width: 100%;
+  border: 1px solid transparent;
+  background-color: transparent;
+  font-size: 50px;
+}
+@keyframes box {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(50%);
+  }
+  50% {
+    transform: translateX(75%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  body .container {
+    width: 80%;
+    height: 90%;
+  }
+  body .container .container-box .container-inner-box .card-one, body .container .container-box .container-inner-box .card-two {
+    margin-right: 50px;
+    transform: translateX(25px);
+    border: 1px solid #000;
+    height: 85%;
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  body .container {
+    width: 70%;
+    height: 90%;
+  }
+  body .container .container-box .btn {
+    position: absolute;
+    top: 77%;
+    text-shadow: 5px 6px 6px rgba(0, 0, 0, 0.61);
+    height: 25px;
+    width: auto;
+    padding: 2px 3px;
+  }
+  body .container .container-box .start-game {
+    left: 10%;
+    height: 10%;
+    width: 20%;
+    box-shadow: var(--box-shadow);
+  }
+  body .container .container-box .start-game button {
+    border: 1px solid transparent;
+  }
+  body .container .container-box .new-game {
+    right: 10%;
+    height: 10%;
+    width: 20%;
+    box-shadow: var(--box-shadow);
+  }
+  body .container .container-box .new-game button {
+    border: 1px solid transparent;
+  }
+  body .container .container-box .player {
+    left: 45%;
+  }
+  body .container .container-box .container-inner-box .card-one, body .container .container-box .container-inner-box .card-two {
+    margin-right: 50px;
+    transform: translateX(25px);
+    height: 75%;
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body .container {
+    width: 70%;
+    height: 90%;
+  }
+  body .container .container-box .btn {
+    top: 77%;
+    height: 20px;
+    padding: 1px 2px;
+    font-size: 12px;
+  }
+  body .container .container-box .container-inner-box .card-one, body .container .container-box .container-inner-box .card-two {
+    margin-right: 50px;
+    transform: translateX(25px);
+    height: 75%;
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 426px) {
+  body .container {
+    width: 90%;
+    height: 80%;
+  }
+  body .container .container-box {
+    position: relative;
+  }
+  body .container .container-box .btn {
+    position: absolute;
+    top: 75%;
+    height: 20px;
+    font-size: 12px;
+  }
+  body .container .container-box .start-game {
+    left: 15%;
+  }
+  body .container .container-box .new-game {
+    right: 5%;
+  }
+  body .container .container-box .player {
+    left: 45%;
+    top: 70%;
+  }
+  body .container .container-box .container-inner-box .card-one, body .container .container-box .container-inner-box .card-two {
+    margin-right: 40px;
+    transform: translateX(25px);
+    height: 75% !important;
+    width: 30% !important;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 376px) {
+  body .container {
+    width: 90%;
+    height: 80%;
+  }
+  body .container .container-box .container-inner-box .card-one, body .container .container-box .container-inner-box .card-two {
+    margin-right: 30px;
+    transform: translateX(12px);
+    height: 70%;
+    width: 30%;
+  }
+}/*# sourceMappingURL=index.css.map */

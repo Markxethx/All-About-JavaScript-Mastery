@@ -1,0 +1,69 @@
+.containerTwo {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    .direction-one{
+        position: absolute;
+        top: 30%;
+    }
+    .direction-two{
+        position: absolute;
+        top: 20%;
+    }
+    .direction-three{
+        position: absolute;
+        top: 60%;
+        button{
+            background-color: transparent;
+            a{
+                background: transparent;
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+    .random-cards{
+        position: absolute;
+        width: 80%;
+        height: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        overflow: hidden;
+        flex-wrap: wrap;
+        .box-card{
+            width: 6.5%;
+            height: 80%;
+            margin: 0 5px;
+            box-shadow: var(--box-shadow);
+            animation: box 0.15s 6 linear;
+            border-radius: 10px;
+            background-color: transparent;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.02);
+            }
+            button{
+                height: 100%;
+                width: 100%;
+                border: 1px solid transparent;
+                background-color: transparent;
+                font-size: 50px;
+            }
+        }
+        @keyframes box {
+            0% {
+                transform: translateX(0%);
+            }
+            25% {
+                transform: translateX(50%);
+            }
+            50% {
+                transform: translateX(75%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    }
+}
