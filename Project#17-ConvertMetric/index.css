@@ -1,0 +1,118 @@
+:root {
+    --backgroundBody-- : #edf2f4;
+    --header-- : ;
+    --body-- : #fff;
+    --boxShadow-- : 0px 0px 5px 3px rgb(135, 133, 133);
+    --borderRadius-- : 1rem;
+    --convert-- : #8d99ae;
+    --bodyBackground-- : #adb5bd;
+    --bodyTitle-- : #14213d;
+    --bodyTitleBaby-- : #495057;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.main {
+    max-height: 40rem;
+    max-width: 30rem;
+    background-color: var(--body--);
+    margin: 0.2rem;
+    border-radius: var(--borderRadius--) ;
+    box-shadow: var(--boxShadow--);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+}
+.main .header {
+    height: 15rem;
+    width: 90%rem;
+    margin: 0.2rem;
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    border-radius: 0.8rem 0.8rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--backgroundBody--);
+}
+.main .header .form #newValue, .main .header .form .submit {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    text-align: center;
+    align-items: center;
+    max-width: 10rem;
+    height: 3rem;
+    font-size: 2.5rem;
+    text-decoration: none;
+    background: transparent;
+    color: var(--backgroundBody--);
+    font-weight: bolder;
+    border-radius: var(--borderRadius--);
+}
+
+.main .header .form .submit {
+    width: 4rem;
+    height: 2rem;
+    font-size: 0.8rem;
+    margin-left: 52px;
+    background: var(--body--);
+    color: var(--convert--);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.main .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--bodyBackground--);
+    height: 25rem;
+    width: 0%rem;
+    margin: 0 0.2rem 0.2rem 0.2rem;
+    border-radius: 0 0 0.8rem 0.8rem;
+}
+
+.main .body .box {
+    max-height: 6rem;
+    max-width: 25rem;
+    background: var(--body--);
+    margin: 0.5rem 1rem;
+    text-align: center;
+    border-radius: var(--borderRadius--);
+    padding: 0 5rem;
+}
+
+@media (max-width: 425px) {
+    .main .body .box {
+        padding: 0 1rem;
+        height: 6rem;
+    }
+}
+.main .body .box * {
+    padding: 0.23rem;
+    margin: 0;
+}
+
+.main .body .box .title {
+    color: var(--bodyTitle--);
+}
+.main .body .box .titleBaby {
+    color: var(--bodyTitleBaby--);
+}
