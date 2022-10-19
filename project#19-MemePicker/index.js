@@ -1,19 +1,37 @@
 import { catsData } from '/data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
+const getImageBtn = document.getElementById('get-image-btn')
+const gifsOnlyOption = document.getElementById('gifs-only-option')
 
+emotionRadios.addEventListener('change', highlightCheckedOption)
+
+getImageBtn.addEventListener('click', getMatchingCatsArray)
+
+function highlightCheckedOption(e){
+    const radios = document.getElementsByClassName('radio')
+    for (let radio of radios){
+        radio.classList.remove('highlight')
+    }
+    document.getElementById(e.target.id).parentElement.classList.add('highlight')
+}
+
+
+function getMatchingCatsArray(){     
+    if(document.querySelector('input[type="radio"]:checked')){
+        const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
+        const isGif = gifsOnlyOption.checked
 /*
 Challenge:
-1. Add an eventListener to emotionRadios that will listen 
-   out for any *change* in our radio buttons. When it detects
-   a change, it should log out the id of the element that 
-   was selected.
-⚠️️ ️T️h️is won't work if the eventListener is listening out for a 
-   'click'. Google what event to listen for - I've already 
-   given you a clue!
-*/
-
-emotionRadios.a
+1. Use the .filter() and .includes() methods to get 
+   an array of cats which have the selected emotion
+   in their emotionTags array. 
+2. Store this array in a const and log it out to check
+   it's working. Think: what would be a good name for the
+   const?
+*/  
+    }  
+}
 
 function getEmotionsArray(cats){
     const emotionsArray = []    
