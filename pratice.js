@@ -62,3 +62,15 @@ console.log(countup(5));
 };
 
 console.log(myConcat([1, 2], [3, 4, 5]));
+  
+  fetch('https://jsonplaceholder.typicode.com/comments', {
+        method: "POST",
+        body: JSON.stringify({
+            postId: 1,
+            name: 'Dylan',
+            email: 'dylansemail310@gmail.com',
+            body: 'That was dope!'
+        })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
