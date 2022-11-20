@@ -10,16 +10,49 @@ let weather = {
         .then(data => this.displayWeather(data))
     },
     displayWeather(data) {
+    console.log(data)
+
     const {name} = data;
-    const {country, sunrise, sunset} = data.sys;
+    const {country} = data.sys;
     const {temp, humidity} = data.main;
     const {speed} = data.wind;
-    console.log(speed)
-    console.log(data)
-    console.log(temp, humidity)
-    console.log(country,sunrise, sunset)
-    document.getElementById("apple").innerHTML = name
-    }
+    const {icon, description} = data.weather[0];
+
+    document.getElementById("name").innerHTML = `<h1 class="text-stroke-description">${name}</h1>`;
+    document.getElementById("icon").innerHTML = ``;
+    document.getElementById("icon").src =
+      "https://openweathermap.org/img/wn/" + icon + ".png";
+    document.getElementById("country").innerHTML = country;
+    document.getElementById("description").innerHTML = description.toUpperCase();
+    document.getElementById("temp").innerHTML = temp + "&#8451";
+    document.getElementById("humidity").innerHTML = `<h2>Humidity: ${humidity} %</h2>`;
+    document.getElementById("speed").innerHTML = `<h2>Wind Speed: ${speed} km/hr</h2>`;
+    document.body.style.backgroundImage =
+      "url('https://source.unsplash.com/1600x900/?" + name + "')";
+    },
+    search() {
+        this.fetchWeather(input.value);
+        console.log(input.value)
+    },
 }
-weather.fetchWeather("marikina")
-weather.displayWeather()
+const input = document.getElementById("input");
+const search = document.getElementById("search");
+search.addEventListener("click", function() {
+    weather.search();
+    input.value = ""
+})
+
+// document.querySelector("#input")
+//   .addEventListener('change', (e) => {
+//     weather.fetchWeather(e.currentTarget.value);
+// });
+
+
+input.addEventListener("keyup", function (event) {
+    console.log(event)
+    if (event.key == "Enter") {
+      weather.search();
+    }
+});
+weather.fetchWeather("manila");
+
