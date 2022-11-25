@@ -1,0 +1,165 @@
+:root {
+    --book-background-- :  #ede0d4;
+    --container-one-- : #b08968;
+    --container-two : #e6ccb2;
+    --shadow-- :#ffbe0b;
+    --button-- : #d90429;
+}
+
+@font-face {
+    font-family: 'RomanceFatalPrima-RAZV' ;
+    src: url(RomanceFatalPrima-RAZV.ttf);
+}
+
+@font-face {
+    font-family: 'WizardWorldSimplified-Kxr7' ;
+    src: url(WizardWorldSimplified-Kxr7.ttf);
+}
+
+@font-face {
+    font-family: 'Parseltongue-GOnG' ;
+    src: url(Parseltongue-GOnG.ttf);
+}
+@font-face {
+    font-family: 'Xefora-vp34' ;
+    src: url(Xefora-vp34.ttf);
+}
+
+@font-face {
+    font-family: 'Legendary Runes Free Trial' ;
+    src: url(LegendaryRunesFreeTrial.ttf);
+}
+
+@font-face {
+    font-family: 'ParryHotter' ;
+    src: url(ParryHotter.ttf);
+}
+.body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'RomanceFatalPrima-RAZV', sans-serif;
+
+}
+
+.book {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--book-background--) ;
+}
+.book .main {
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+.book .main .containerOne {
+    background-color: var(--container-one--);
+    width: 100%;
+    border-radius: 30px 0 0 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.book .main .containerOne h1 {
+    font-family: 'RomanceFatalPrima-RAZV', sans-serif;
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+.book .main .containerOne .btns {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.book .main .containerOne .btns select {
+    width: 100%;
+    margin: 0 6px;
+    height: 2rem;
+    text-align: center;
+    border: 1px solid var(--container-two);
+    border-radius: 5px;
+    background-color: var(--container-two);
+}
+
+.book .main .containerOne button {
+    background-color: var(--button--);
+    height: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    color: var(--container-one--);
+    border: 0;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+.book .main .containerOne textarea {
+    margin: 0 auto;
+    width: 90%;
+    text-align: start;
+    background-color: var(--container-two);
+    border-radius: 10px;
+    height: 40%;
+    padding: 20px;
+}
+.book .main .containerTwo {
+    width: 100%;
+    border-radius: 0 30px 30px 0;
+    background-color: var(--container-two);
+    box-shadow: inset 0 0 50px var(--shadow--);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* .book .main .containerTwo::before {
+    content:'';
+  display:block !important;
+  width:4%;
+  height:100%;
+  background-color:var(--shadow--);
+  box-shadow: 0 0 30px var(--shadow--);
+  opacity: 50%;
+} */ 
+
+@media (max-width: 480px) {
+    .book .main {
+        flex-direction: column;
+    }
+}
+
+/* .book .main .containerTwo{
+    display: flex;
+    justify-content: center;
+} */
+
+.book .main .containerTwo img {
+    height: 10rem;
+    margin: 0 auto;
+
+}
+
+.book .main .containerTwo textarea {
+    /* margin: 20px 50px 0 50px; */
+    width: 90%;
+    text-align: start;
+    background-color: var(--container-two);
+    border-radius: 10px;
+    height: 40%;
+    padding: 20px;
+    border: 0;
+    background-color: transparent;
+}
+
+.book .main .containerTwo .output {
+    font-family: "ParryHotter";
+    font-size: 20px;
+}
