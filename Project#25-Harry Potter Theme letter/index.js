@@ -13,7 +13,8 @@ selectLogo = document.querySelector(".selectLogo"),
 selectFont = document.querySelector(".selectFont"),
 img = document.querySelector("img"),
 output = document.querySelector(".output"),
-input = document.querySelector(".input")
+input = document.querySelector(".input"),
+saveBtn = document.getElementById("save")
 
 for (const logos in logo) {
     let option = `<option value="${logo[logos]}">${logos}</option>`
@@ -36,3 +37,28 @@ input.addEventListener("input", (e)=> {
 });
 output.setAttribute("readonly", "readonly")
 
+saveBtn.addEventListener("click", ()=>{
+    localStorage.setItem("myLetter", JSON.stringify(input.value))
+    localStorage.setItem("myFont", JSON.stringify(selectFont.value))
+    localStorage.setItem("myLogo", JSON.stringify(selectLogo.value))
+    alert("Save in the Browser")
+    input.value = JSON.parse( localStorage.getItem("myLetter"))
+})
+
+const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLetter"))
+const leadsFromLocalStorageLogo = JSON.parse( localStorage.getItem("myLogo"))
+const leadsFromLocalStorageFont = JSON.parse( localStorage.getItem("myFont"))
+
+if (leadsFromLocalStorage) {
+    if (leadsFromLocalStorage == "") {
+        input.setAttribute("placeholder", "Enter Your Letter here")
+    } else {
+        input.value = leadsFromLocalStorage
+        output.value = leadsFromLocalStorage
+        output.style.fontFamily = leadsFromLocalStorageFont
+        selectLogo.value = leadsFromLocalStorageLogo
+        selectFont.value = leadsFromLocalStorageFont
+        img.src = leadsFromLocalStorageLogo
+    }
+
+}
