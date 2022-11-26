@@ -39,6 +39,7 @@
     padding: 0;
     margin: 0;
     font-family: 'RomanceFatalPrima-RAZV', sans-serif;
+    background-color: var(--book-background--);
 
 }
 
@@ -124,6 +125,34 @@
 
 }
 
+.book .main .containerTwo img {
+    height: 10rem;
+    margin: 10px auto 0;
+
+}
+
+.book .main .containerTwo textarea {
+    /* margin: 20px 50px 0 50px; */
+    width: 90%;
+    text-align: start;
+    background-color: var(--container-two);
+    border-radius: 10px;
+    height: auto;
+    /* padding: 30px 30px 0 30px; */
+    margin: 0 auto;
+    background-color: transparent;
+    border: none transparent;
+    outline: none;
+
+}
+.book .main .containerTwo textarea::-webkit-scrollbar { width: 0 !important }
+
+.book .main .containerTwo .output {
+    /* font-family: "RomanceFatalPrima-RAZV"; */
+    font-size: 20px;
+    line-height: 1.5;
+}
+
 @media (max-width: 480px) {
     .book {
         overflow: hidden;
@@ -139,9 +168,22 @@
     }
     .book .main .containerTwo .output{
         margin-right: 30px;
+        margin: 10px;
     }
     .book .main .containerTwo h1 {
         margin-left: 55% !important;
+    }
+}
+
+@media (max-width: 768px){
+    .book .main {
+        flex-direction: column;
+    }
+    .book .main .containerOne {
+        margin-bottom: 10px;
+    }
+    .book .main .containerOne, .book .main .containerTwo {
+        border-radius: 15px;
     }
 }
 
@@ -149,32 +191,8 @@
     .book .main .containerTwo h1 {
         margin-left: 40% !important;
     }
+    .book .main .containerTwo .output{
+        margin: 10px;
+    }
 }
 
-.book .main .containerTwo img {
-    height: 10rem;
-    margin: 10px auto 0;
-
-}
-
-.book .main .containerTwo textarea {
-    /* margin: 20px 50px 0 50px; */
-    width: 90%;
-    text-align: start;
-    background-color: var(--container-two);
-    border-radius: 10px;
-    height: auto;
-    padding: 30px 30px 0 30px;
-    margin: 0 auto;
-    background-color: transparent;
-    border: none transparent;
-    outline: none;
-
-}
-.book .main .containerTwo textarea::-webkit-scrollbar { width: 0 !important }
-
-.book .main .containerTwo .output {
-    font-family: "RomanceFatalPrima-RAZV";
-    font-size: 20px;
-    line-height: 1.5;
-}
