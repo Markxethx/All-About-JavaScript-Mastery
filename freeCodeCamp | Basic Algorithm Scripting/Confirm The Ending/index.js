@@ -11,3 +11,22 @@ This challenge can be solved with the .endsWith() method,
 }
 
 confirmEnding("Bastian", "n");
+
+//other solution
+function confirmEnding(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+
+  let re = new RegExp(target + "$", "i");
+
+  return re.test(str);
+}
+
+console.log(confirmEnding("Bastian", "n"));
+
+//other solution
+function confirmEnding(str, target) {
+  return str.slice(-target.length) === target
+}
+
+confirmEnding("Bastian", "n");
