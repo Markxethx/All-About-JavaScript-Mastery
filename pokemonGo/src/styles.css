@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-stroke {
+    /* Prefix required. Even Firefox only supports the -webkit- prefix */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke: 1px black;
+    color: black;
+  -webkit-text-fill-color: red; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.text-stroke-des {
+    /* Prefix required. Even Firefox only supports the -webkit- prefix */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke: 1px white;
+    color: white;
+  -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+.modernWay {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+            line-clamp: 4; 
+    -webkit-box-orient: vertical;
+ }
