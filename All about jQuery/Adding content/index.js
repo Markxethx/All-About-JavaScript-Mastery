@@ -1,3 +1,7 @@
-var tweet = "some text here";
+var tweet = "<div> some text here </div>";
 
+//append means adding a new element after the target
 $("tweet-section div").append(tweet)
+
+//prefpnd is the reverse of the append, element will be added before the target elemen
+$("tweet-section div").prepend(tweet)
