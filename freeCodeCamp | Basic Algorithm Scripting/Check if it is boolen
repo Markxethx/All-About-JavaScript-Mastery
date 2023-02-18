@@ -1,0 +1,10 @@
+Check if a value is classified as a boolean primitive. Return true or false.
+
+Boolean primitives are true and false.
+
+//solutions
+function booWho(bool) {
+  console.log(typeof bool === "boolean")
+}
+
+booWho(true);
