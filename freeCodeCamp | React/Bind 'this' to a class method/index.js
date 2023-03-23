@@ -39,7 +39,7 @@ class MyComponent extends React.Component {
     return (
       <div>
         { /* Change code below this line */ }
-        <button>You clicked!</button>
+        <button onClick= {this.handleClick}>Clicked Me</button>
         { /* Change code above this line */ }
         <h1>{this.state.text}</h1>
       </div>
