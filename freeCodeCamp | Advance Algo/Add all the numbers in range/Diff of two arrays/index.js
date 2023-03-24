@@ -6,18 +6,9 @@ Note: You can return the array with its elements in any order.
 //solutions
 
 function diffArray(arr1, arr2) {
-  const newArr = [];
-  var enough = 0;
-  if (arr1.length < arr2.length) {
-    enough = arr1.length;
-  } else {
-    enough = arr2.length;
-  }
+return arr1.concat(arr2).filter(item => !arr1.includes(item) || !arr2.includes(item) )
 
-  for (let i =0; i < enough; i++) {
-    if ()
-  }
-  return newArr;
 }
 
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
